@@ -27,7 +27,8 @@ namespace AADAuthNet5.Client
             builder.Services.AddMsalAuthentication(options =>
             {
                 builder.Configuration.Bind("AzureAd", options.ProviderOptions.Authentication);
-                options.ProviderOptions.DefaultAccessTokenScopes.Add("api://api.id.uri/access_as_user");
+                options.ProviderOptions.DefaultAccessTokenScopes.Add(
+                    "febb399b-2ea0-49fe-b75f-dffefe9f2370/API.Access");
             });
 
             await builder.Build().RunAsync();
